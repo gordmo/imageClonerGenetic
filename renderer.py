@@ -20,7 +20,7 @@ main_Batch = pyglet.graphics.Batch()
 point_list = [59, 149, 328, 204, 305, 284, 3, 197] #, 25, 107, 18, 61
 ec = int(len(point_list)/2)
 main_Batch.add(ec, pyglet.gl.GL_TRIANGLE_FAN, None, 
-    ("v2i", genAlgo.grabRandomTriangle()),
+    ("v2i", genAlgo.grabRandomTriangle()), #genAlgo.grabRandomTriangle()
     ("c3B", (255, 0, 0) * ec))
 
 
@@ -46,8 +46,7 @@ def on_key_press(symbol, modifier):
         # window2.close()
 
 
-window.set_location(100, 400)
-window2.set_location(1300, 400)
+#window.set_location(100, 400)
+#window2.set_location(1300, 400)
 
 pyglet.app.run()
-
